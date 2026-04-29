@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Great Number Game</title>
+    <style>
+        body { text-align: center; font-family: Arial; }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+        }
+
+        .high { background-color: red; }
+        .low { background-color: red; }
+        .correct { background-color: green; }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+
+    {% if result == "high" %}
+        <div class="box high">Too high!</div>
+
+    {% elif result == "low" %}
+        <div class="box low">Too low!</div>
+
+    {% elif result == "correct" %}
+        <div class="box correct">
+            Correct! 🎉<br>
+            <a href="/reset"><button>Play Again</button></a>
+        </div>
+    {% endif %}
+
+    {% if result != "correct" %}
+    <form action="/guess" method="post">
+        <input type="number" name="guess">
+        <button>Submit</button>
+    </form>
+    {% endif %}
+
+</body>
+</html>
