@@ -4,48 +4,70 @@
     <title>Dojo Fruit Store</title>
 </head>
 <body>
+    <h1>Dojo Fruit Store!</h1>
 
-<h1>FRUIT TEST 🔥</h1>
+    <form action="/checkout" method="post">
+        <h3>What would you like to buy?</h3>
 
-<form action="/checkout" method="post">
+        <table border="1">
+            <tr>
+                <th>Fruit Name</th>
+                <th>Quantity</th>
+            </tr>
 
-    Strawberry:
-    <select name="strawberry">
-        <option value="0">0</option>
-        <option value="1">1</option>
-    </select>
+            <tr>
+                <td>Strawberry</td>
+                <td>
+                    <select name="strawberry">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
 
-    <br>
+            <tr>
+                <td>Raspberry</td>
+                <td>
+                    <select name="raspberry">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
 
-    Raspberry:
-    <select name="raspberry">
-        <option value="0">0</option>
-        <option value="1">1</option>
-    </select>
+            <tr>
+                <td>Apple</td>
+                <td>
+                    <select name="apple">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
 
-    <br>
+        <h3>Your Information</h3>
 
-    Apple:
-    <select name="apple">
-        <option value="0">0</option>
-        <option value="1">1</option>
-    </select>
+        <p>
+            Name:
+            <input type="text" name="name">
+        </p>
 
-    <br><br>
+        <p>
+            Your Student ID:
+            <input type="text" name="student_id">
+        </p>
 
-    Name:
-    <input type="text" name="name">
-
-    <br>
-
-    Student ID:
-    <input type="text" name="student_id">
-
-    <br><br>
-
-    <input type="submit" value="Buy">
-
-</form>
-
+        <input type="submit" value="Buy me stuff!">
+    </form>
 </body>
 </html>

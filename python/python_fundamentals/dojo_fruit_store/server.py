@@ -19,7 +19,8 @@ def checkout():
 
     print(f"Charging {name} for {count} fruits")
 
-    return render_template("checkout.html",
+    return render_template(
+        "checkout.html",
         strawberry=strawberry,
         raspberry=raspberry,
         apple=apple,
