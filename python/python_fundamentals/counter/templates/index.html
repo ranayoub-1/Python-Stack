@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+</head>
+<body>
+
+    <h1>Counter</h1>
+
+    <h3>Page Visits: {{ visits }}</h3>
+    <h3>Counter Value: {{ counter }}</h3>
+
+    <a href="/add_two">
+        <button>+2</button>
+    </a>
+
+    <a href="/reset">
+        <button>Reset Counter</button>
+    </a>
+
+    <a href="/destroy_session">
+        <button>Destroy Session</button>
+    </a>
+
+    <br><br>
+
+    <form action="/add_custom" method="post">
+        <input type="number" name="number" required>
+        <input type="submit" value="Add Custom Number">
+    </form>
+
+</body>
+</html>
